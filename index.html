@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лікарня</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Лікарня</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Про нас</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#doctors">Лікарі</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#prices">Ціни</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#appointment">Запис</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="jumbotron">
+      <h1 class="display-4">Вітаємо у нашій клініці</h1>
+      <p class="lead">
+        Надаємо пацієнтам високоякісні медичні послуги.
+      </p>
+      <hr class="my-4" />
+      <p>
+        Запишіться на прийом до наших досвідчених лікарів сьогодні та отримайте
+        найкращий догляд.
+      </p>
+      <a class="btn btn-primary btn-lg" href="#appointment" role="button"
+        >Резервувати зараз</a
+      >
+    </div>
+    <div id="about" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>Про нас</h2>
+          <p>
+            Клініка є провідним постачальником медичних послуг з командою
+            досвідчені лікарі та медсестри, які віддані наданню
+            найкращий догляд за нашими пацієнтами. Ми знаходимося в самому центрі м
+            міста та пропонують широкий спектр медичних послуг, від заг
+            обстеження до спеціалістів.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="doctors" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>Наші Лікарі</h2>
+          <p>
+            Наша команда досвідчених лікарів прагне забезпечити наші
+            пацієнтів з найкращим можливим доглядом. Нижче наведено список наших лікарів
+            та їхні спеціальності:
+          </p>
+        <ul>
+          <li>Токар Сергій Іванович - Лікар загальної практики</li>
+          <li>Ромська Валерія Дмитрівна - Педіатр</li>
+          <li>Малюк Денис Вікторович - Кардіолог</li>
+          <li>Носенко Ірина Василівна - Дерматолог</li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div id="prices" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+        <h2>Наші ціни</h2>
+        <p>
+          Нижче наведено список цін на найпоширеніші послуги. Будь ласка
+          зауважте, що ціни можуть змінюватися.
+        </p>
+        <ul>
+          <li>Загальний огляд - 100 UAH</li>
+          <li>Педіатричне обстеження - 120 UAH</li>
+          <li>Консультація кардіолога - 200 UAH</li>
+          <li>Консультація дерматолога - 150 UAH</li>
+        </ul>
+        </div>
+      </div>
+    </div>
+<div id="appointment" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+        <h2>Запишіться на прийом</h2>
+        <form id="appointment-form">
+          <div class="form-group">
+            <label for="name">Ім'я:</label>
+            <input type="text" class="form-control" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Емейл:</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Номер телефону:</label>
+            <input type="tel" class="form-control" id="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="doctor">Лікар:</label>
+            <select class="form-control" id="doctor" required>
+            <option value="" disabled selected>Оберіть лікаря</option>
+            <option value="Dr. John Smith">Токар Сергій Іванович</option>
+            <option value="Dr. Sarah Johnson">Ромська Валерія Дмитрівна</option>
+            <option value="Dr. Michael Brown">Малюк Денис Вікторович</option>
+            <option value="Dr. Emily Davis">Носенко Ірина Василівна</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Дата:</label>
+            <input type="date" class="form-control" id="date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">Час:</label>
+            <input type="time" class="form-control" id="time" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Підтвердити</button>
+        </form>
+    </div>
+  </div>
+</div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+           src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+           integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+           crossorigin="anonymous"
+         ></script>
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eTDM6wlVQpjSkBggmJhAPT0eNXaIIWr5nQ5NcRSKH4205RDG9QDmApEMWtJf"
+        crossorigin="anonymous"
+        ></script>
+        <script
+           src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+           integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+           crossorigin="anonymous"
+         ></script>
+        <script>
+        // Submit form data to Google Sheets using AJAX
+        $("#appointment-form").submit(function (event) {
+        event.preventDefault();
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var phone = $("#phone").val();
+        var doctor = $("#doctor").val();
+        var date = $("#date").val();
+        var time = $("#time").val();
+        $.ajax({
+        url:
+        "https://script.google.com/macros/s/AKfycbzVw_xM0JVYiVcBb9OQ7R14TxJt1zEqthLrkZ5K3p5w5YAf-jM/exec",
+        method: "GET",
+        dataType: "json",
+        data: {
+        Name: name,
+        Email: email,
+        Phone: phone,
+        Doctor: doctor,
+        Date: date,
+        Time: time,
+        },
+        success: function () {
+        alert("Appointment booked successfully!");
+        },
+        error: function () {
+        alert("Something went wrong. Please try again.");
+        },
+        });
+        });
+        </script>
+        
+          </body>
+        </html>
+        <!-- End of code -->
