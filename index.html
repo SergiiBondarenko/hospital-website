@@ -110,18 +110,18 @@
   <div class="row">
     <div class="col-sm-12">
         <h2>Запишіться на прийом</h2>
-        <form id="appointment-form">
+        <form id="appointment-form" action="mail.php" method="POST">
           <div class="form-group">
             <label for="name">Ім'я:</label>
-            <input type="text" class="form-control" id="name" required />
+            <input type="text" class="form-control" id="name" name="user_name" required />
           </div>
           <div class="form-group">
             <label for="email">Емейл:</label>
-            <input type="email" class="form-control" id="email" required />
+            <input type="email" class="form-control" id="email" name="user_email" required />
           </div>
           <div class="form-group">
             <label for="phone">Номер телефону:</label>
-            <input type="tel" class="form-control" id="phone" required />
+            <input type="tel" class="form-control" id="phone" name="user_phone" required />
           </div>
           <div class="form-group">
             <label for="doctor">Лікар:</label>
@@ -135,11 +135,11 @@
           </div>
           <div class="form-group">
             <label for="date">Дата:</label>
-            <input type="date" class="form-control" id="date" required />
+            <input type="date" class="form-control" id="date" name="user_date" required />
           </div>
           <div class="form-group">
             <label for="time">Час:</label>
-            <input type="time" class="form-control" id="time" required />
+            <input type="time" class="form-control" id="time" name="user_time" required />
           </div>
           <button type="submit" class="btn btn-primary">Підтвердити</button>
         </form>
@@ -162,39 +162,6 @@
            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
            crossorigin="anonymous"
          ></script>
-        <script>
-        // Submit form data to Google Sheets using AJAX
-        $("#appointment-form").submit(function (event) {
-        event.preventDefault();
-        var name = $("#name").val();
-        var email = $("#email").val();
-        var phone = $("#phone").val();
-        var doctor = $("#doctor").val();
-        var date = $("#date").val();
-        var time = $("#time").val();
-        $.ajax({
-        url:
-        "https://script.google.com/macros/s/AKfycbzVw_xM0JVYiVcBb9OQ7R14TxJt1zEqthLrkZ5K3p5w5YAf-jM/exec",
-        method: "GET",
-        dataType: "json",
-        data: {
-        Name: name,
-        Email: email,
-        Phone: phone,
-        Doctor: doctor,
-        Date: date,
-        Time: time,
-        },
-        success: function () {
-        alert("Appointment booked successfully!");
-        },
-        error: function () {
-        alert("Something went wrong. Please try again.");
-        },
-        });
-        });
-        </script>
-        
           </body>
         </html>
         <!-- End of code -->
