@@ -127,13 +127,13 @@
           <div class="form-group">
             <label for="doctor">Лікар:</label>
             <input list="doctor" type="dr_name" class="form-control" id="drname" name="dr_name" required />
-            <select class="form-control" id="doctor" name="dr_name" required>
+            <datalist id="doctor">
             <option value="" disabled selected>Оберіть лікаря</option>
-            <option value="Dr. John Smith">Токар Сергій Іванович</option>
-            <option value="Dr. Sarah Johnson">Ромська Валерія Дмитрівна</option>
-            <option value="Dr. Michael Brown">Малюк Денис Вікторович</option>
-            <option value="Dr. Emily Davis">Носенко Ірина Василівна</option>
-            </select>
+            <option value="Токар Сергій Іванович">
+            <option value="Ромська Валерія Дмитрівна">
+            <option value="Малюк Денис Вікторович">
+            <option value="Носенко Ірина Василівна">
+            </datalist>
           </div>
           <div class="form-group">
             <label for="date">Дата:</label>
