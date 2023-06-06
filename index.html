@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -110,7 +111,7 @@
   <div class="row">
     <div class="col-sm-12">
         <h2>Запишіться на прийом</h2>
-        <form id="appointment-form" action="mail.php" method="POST">
+        <form id="appointment-form" class="pageclip-form" action="https://send.pageclip.co/MmYkSWIvxPRoOnhKDELCdN2JCaxBG47Q" method="post">
           <div class="form-group">
             <label for="name">Ім'я:</label>
             <input type="text" class="form-control" id="name" name="user_name" required />
@@ -141,7 +142,7 @@
             <label for="time">Час:</label>
             <input type="time" class="form-control" id="time" name="user_time" required />
           </div>
-          <button type="submit" class="btn btn-primary">Підтвердити</button>
+          <button type="submit" class="pageclip-form__submit">Підтвердити</button>
         </form>
     </div>
   </div>
@@ -162,6 +163,7 @@
            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
            crossorigin="anonymous"
          ></script>
+         <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
           </body>
         </html>
         <!-- End of code -->
